@@ -8,8 +8,6 @@ typedef struct LAPDevice LAPDevice;
 
 typedef struct {
   float sample_rate;
-  int format_ID;
-  char format_flags;
   int bits_per_channel;
   int channels_per_frame;
   int frames_per_packet;
@@ -19,7 +17,10 @@ typedef struct {
 
 
 LAPDevice *lap_create_device(LAPDescriptor descriptor);
-void lap_play_sound(LAPDevice *device);
+void lap_start_sound(LAPDevice *device);
+void lap_change_gain(float amount);
+void lap_change_freq(double amount);
 void lap_cleanup(LAPDevice *device);
+
 
 #endif
