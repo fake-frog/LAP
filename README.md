@@ -7,7 +7,9 @@
 #### Debian Requirements:
 
 dependencies:
-`sudo apt install libjack-jackd2-dev pipewire-jack jackd2`
+```
+sudo apt install libjack-jackd2-dev pipewire-jack jackd2
+```
 
 configure the path to pipewire:
 ```
@@ -16,5 +18,7 @@ sudo ldconfig
 ```
 
 make sure pipewire is running:
-`systemctl --user enable --now pipewire wireplumber pipewire-pulse`
+```
+systemctl --user enable --now pipewire wireplumber pipewire-pulse
+```
 
